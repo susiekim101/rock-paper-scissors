@@ -11,23 +11,45 @@
     <h1 class="title">Rock Paper Scissors</h1>
     <h2 class="subtitle">Player</h2>
     <div class="playerBtn">
-        <button id="rockButton">
+        <button class="choiceBtn" id="rockButton">
             <p class="icon">👊</p>
             <p class="iconText">Rock</p>
         </button>
-        <button id="paperButton">
+        <button class="choiceBtn" id="paperButton">
             <p class="icon">🖐️</p>
             <p class="iconText">Paper</p>
         </button>
-        <button id="scissorsButton">
+        <button class="choiceBtn" id="scissorsButton">
             <p class="icon">✌️</p>
             <p class="iconText">Scissors</p>
         </button>
     </div>
 
-    <h2 class="subtitle">Computer</h2>
+    <div class="computerOptions">
+        <h2 class="subtitle" id="computerText">Computer</h2>
+        <button id="computerButton">
+            <p id="computerIcon">❓</p>
+        </button>
+    </div>
+    
+    <div class="resultsContainer">
+        <div class="scoreContainer">
+            <div class="playerContainer">
+                <h2>Player: </h2>
+                <h2>0</h2>
+            </div>
 
+            <div class="computerContainer">
+                <h2>Computer: </h2>
+                <h2>0</h2>
+            </div>
+            
+        </div>
 
-    <script src="script.js"> </script>
+        <div class="conclusionContainer">
+            <p id="winner">SOMEONE wins the game!</p>
+        </div>
+    </div>
 </body>
+<script src="script.js"> </script>
 </html>
