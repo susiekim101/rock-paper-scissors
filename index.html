@@ -5,8 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script src="script.js"> </script>
+    <h1 class="title">Rock Paper Scissors</h1>
+    <h2 class="subtitle">Player</h2>
+    <div class="playerBtn">
+        <button class="choiceBtn" id="rockButton">
+            <p class="icon">👊</p>
+            <p class="iconText">Rock</p>
+        </button>
+        <button class="choiceBtn" id="paperButton">
+            <p class="icon">🖐️</p>
+            <p class="iconText">Paper</p>
+        </button>
+        <button class="choiceBtn" id="scissorsButton">
+            <p class="icon">✌️</p>
+            <p class="iconText">Scissors</p>
+        </button>
+    </div>
+
+    <div class="computerOptions">
+        <h2 class="subtitle" id="computerText">Computer</h2>
+        <div id="computerButton">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="resultsContainer">
+            <div class="scoreContainer">
+                <div class="playerContainer">
+                    <h2>Player: </h2>
+                </div>
+
+                <div class="computerContainer">
+                    <h2>Computer: </h2>
+                </div>
+                
+            </div>
+
+            <div class="conclusionContainer">
+            </div>
+            
+            <div>
+                <button id="restartButton">Restart</button>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="script.js"> </script>
 </html>
