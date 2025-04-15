@@ -25,6 +25,17 @@ winnerText.setAttribute("id", "winner");
 winnerText.textContent = "Playing game..."
 conclusionContainer.append(winnerText)
 
+const buttons = document.querySelectorAll(".choiceBtn");
+const restartButton = document.querySelector("#restartButton");
+
+restartButton.addEventListener("click", () => {
+    humanScore = 0;
+    playerScore.textContent = humanScore;
+    computerScore = 0;
+    compScore.textContent = computerScore;
+    buttons.forEach( (button) => button.disabled = false);
+})
+
 function getComputerChoice() {
     const computer = Math.floor((Math.random() * 3));
     if (computer == 0) {
@@ -62,7 +73,6 @@ function calcResult(humanChoice, computerChoice) {
 function updateResult() {
     if (humanScore >= 5) {
         winnerText.textContent = "Player won the game!"
-        const buttons = document.querySelectorAll("button");
         buttons.forEach( (button) => button.disabled = true);
     }
     else if (computerScore >= 5) {
@@ -78,13 +88,11 @@ function playRound(humanChoice) {
     updateResult();
 }
 
+const rockButton = document.querySelector("#rockButton");
+rockButton.addEventListener("click", () => playRound("rock"));
 
+const paperButton = document.querySelector("#paperButton");
+paperButton.addEventListener("click", () => playRound("paper"));
 
-const rockButton = document.querySelector("#rockButton")
-rockButton.addEventListener("click", () => console.log(playRound("rock")))
-
-const paperButton = document.querySelector("#paperButton")
-paperButton.addEventListener("click", () => console.log(playRound("paper")))
-
-const scissorsButton = document.querySelector("#scissorsButton")
-scissorsButton.addEventListener("click", () => console.log(playRound("scissors")))
+const scissorsButton = document.querySelector("#scissorsButton");
+scissorsButton.addEventListener("click", () => playRound("scissors"));
